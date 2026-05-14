@@ -3,13 +3,11 @@
 
 <head>
 
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JEE 2027 COMEBACK</title>
-
-<!-- GOOGLE FONTS -->
+<title>PRATHMESH PANCHAL | IIT JEE 2027</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -20,8 +18,6 @@
     padding:0;
     box-sizing:border-box;
 }
-
-/* BODY */
 
 body{
 
@@ -36,16 +32,21 @@ body{
     overflow-x:hidden;
     overflow-y:auto;
 
-    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(
+    135deg,
+    #0a0a0a,
+    #111111,
+    #1a0f00);
 
-    background:url('3.jpg') no-repeat center center/cover;
+    font-family:'Poppins',sans-serif;
 
     color:white;
 
     position:relative;
 }
 
-/* DARK OVERLAY */
+/* BACKGROUND GLOW */
 
 body::before{
 
@@ -53,21 +54,21 @@ body::before{
 
     position:fixed;
 
-    inset:0;
+    width:700px;
+    height:700px;
+
+    top:-250px;
+    left:-150px;
 
     background:
-    linear-gradient(
-    135deg,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.9));
+    radial-gradient(circle,
+    rgba(255,140,0,0.18),
+    transparent 70%);
 
-    backdrop-filter:blur(4px);
+    animation:glowMove 7s ease-in-out infinite alternate;
 
     z-index:-2;
 }
-
-/* BACKGROUND GLOW */
 
 body::after{
 
@@ -78,17 +79,17 @@ body::after{
     width:700px;
     height:700px;
 
-    background:
-    radial-gradient(circle,
-    rgba(255,120,0,0.18),
-    transparent 70%);
-
-    top:-250px;
+    bottom:-300px;
     right:-150px;
 
-    animation:glowMove 6s ease-in-out infinite alternate;
+    background:
+    radial-gradient(circle,
+    rgba(255,0,80,0.12),
+    transparent 70%);
 
-    z-index:-1;
+    animation:glowMove2 8s ease-in-out infinite alternate;
+
+    z-index:-2;
 }
 
 @keyframes glowMove{
@@ -102,99 +103,89 @@ body::after{
     }
 }
 
+@keyframes glowMove2{
+
+    from{
+        transform:translateY(0px);
+    }
+
+    to{
+        transform:translateY(-50px);
+    }
+}
+
 /* MAIN CONTAINER */
 
 .container{
 
     width:100%;
 
-    max-width:1300px;
+    max-width:1450px;
 
     padding:45px;
 
-    border-radius:35px;
+    border-radius:38px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    gap:60px;
+    gap:55px;
 
-    background:rgba(255,255,255,0.05);
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02));
 
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(18px);
 
-    border:2px solid transparent;
-
-    background-image:
-    linear-gradient(rgba(15,15,15,0.92),
-    rgba(15,15,15,0.88)),
-    linear-gradient(135deg,#ff6600,#ffcc00,#ff0066);
-
-    background-origin:border-box;
-    background-clip:padding-box,border-box;
+    border:2px solid rgba(255,140,0,0.6);
 
     box-shadow:
-    0 0 30px rgba(255,120,0,0.25),
-    0 0 80px rgba(255,0,80,0.08);
+    0 0 35px rgba(255,140,0,0.2),
+    0 0 100px rgba(255,80,0,0.08);
 
-    animation:containerGlow 4s infinite alternate;
+    position:relative;
 }
 
-@keyframes containerGlow{
-
-    from{
-
-        box-shadow:
-        0 0 20px rgba(255,120,0,0.2),
-        0 0 50px rgba(255,0,80,0.05);
-    }
-
-    to{
-
-        box-shadow:
-        0 0 45px rgba(255,120,0,0.5),
-        0 0 100px rgba(255,0,80,0.15);
-    }
-}
-
-/* LEFT */
+/* LEFT SIDE */
 
 .left{
 
-    width:35%;
+    width:33%;
 
     text-align:center;
 }
 
-/* PROFILE */
+/* PROFILE IMAGE */
 
 .profile{
 
-    width:230px;
-    height:230px;
-
-    object-fit:cover;
+    width:240px;
+    height:240px;
 
     border-radius:50%;
 
-    border:5px solid rgba(255,255,255,0.1);
+    object-fit:cover;
+
+    border:5px solid rgba(255,170,0,0.8);
 
     box-shadow:
-    0 0 20px orange,
-    0 0 50px rgba(255,120,0,0.5);
+    0 0 25px orange,
+    0 0 60px rgba(255,140,0,0.6);
 
-    animation:profilePulse 3s infinite alternate;
+    animation:profileGlow 3s infinite alternate;
 }
 
-@keyframes profilePulse{
+@keyframes profileGlow{
 
     from{
         transform:scale(1);
     }
 
     to{
-        transform:scale(1.04);
+        transform:scale(1.03);
     }
 }
 
@@ -202,21 +193,23 @@ body::after{
 
 h1{
 
-    margin-top:30px;
+    margin-top:32px;
 
     font-family:'Orbitron',sans-serif;
 
-    font-size:3rem;
+    font-size:3.4rem;
 
     font-weight:900;
 
-    line-height:1.3;
+    line-height:1.25;
 
     text-transform:uppercase;
 
+    color:white;
+
     text-shadow:
-    0 0 10px orange,
-    0 0 25px rgba(255,120,0,0.8);
+    0 0 12px orange,
+    0 0 30px rgba(255,140,0,0.8);
 }
 
 /* TITLE */
@@ -227,43 +220,101 @@ h2{
 
     font-size:1.2rem;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
     color:#ffcc00;
 
-    text-shadow:0 0 12px rgba(255,200,0,0.8);
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 10px rgba(255,200,0,0.8);
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 
 .right{
 
-    width:65%;
+    width:67%;
 }
 
 /* MOTIVATION BOX */
 
 .motivation{
 
-    padding:35px;
+    position:relative;
 
-    border-radius:28px;
+    padding:55px;
 
-    background:rgba(255,255,255,0.04);
+    border-radius:35px;
 
-    border:1px solid rgba(255,255,255,0.08);
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,0.03),
+    rgba(255,140,0,0.03));
 
-    line-height:2;
+    border:1px solid rgba(255,170,0,0.25);
 
-    font-size:1.2rem;
+    box-shadow:
+    inset 0 0 20px rgba(255,140,0,0.05),
+    0 0 40px rgba(255,140,0,0.08);
 
-    font-weight:500;
+    overflow:hidden;
+}
 
-    color:#f2f2f2;
+/* QUOTE SYMBOLS */
 
-    margin-bottom:35px;
+.quote-top{
 
-    box-shadow:0 0 25px rgba(255,255,255,0.04);
+    position:absolute;
+
+    top:10px;
+    left:28px;
+
+    font-size:6rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:#ff8800;
+
+    text-shadow:
+    0 0 20px orange;
+}
+
+.quote-bottom{
+
+    position:absolute;
+
+    right:30px;
+    bottom:-25px;
+
+    font-size:6rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:#ff8800;
+
+    text-shadow:
+    0 0 20px orange;
+}
+
+/* QUOTE TEXT */
+
+.quote-line{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    line-height:1.45;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+
+    color:#f5f5f5;
 }
 
 /* HIGHLIGHT */
@@ -272,11 +323,42 @@ h2{
 
     color:#ff9900;
 
-    font-weight:700;
-
     text-shadow:
     0 0 10px orange,
-    0 0 25px rgba(255,120,0,0.7);
+    0 0 25px rgba(255,140,0,0.8);
+}
+
+/* DIVIDER */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:25px 0;
+
+    background:
+    linear-gradient(
+    to right,
+    transparent,
+    rgba(255,140,0,0.8),
+    transparent);
+}
+
+/* TARGET */
+
+.target-box{
+
+    margin-top:45px;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 }
 
 /* COUNTDOWN */
@@ -286,30 +368,37 @@ h2{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(140px,1fr));
+    repeat(auto-fit,minmax(160px,1fr));
 
-    gap:20px;
+    gap:22px;
+
+    margin-top:35px;
 }
 
 /* TIME BOX */
 
 .time-box{
 
-    padding:25px 18px;
+    padding:28px 20px;
 
-    border-radius:25px;
-
-    background:rgba(255,255,255,0.05);
-
-    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
 
     text-align:center;
 
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(255,140,0,0.03));
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
     transition:0.3s;
 
-    backdrop-filter:blur(8px);
-
-    box-shadow:0 0 20px rgba(255,120,0,0.05);
+    box-shadow:
+    0 0 25px rgba(255,140,0,0.05);
 }
 
 .time-box:hover{
@@ -317,69 +406,100 @@ h2{
     transform:translateY(-8px);
 
     box-shadow:
-    0 0 25px rgba(255,120,0,0.35),
-    0 0 60px rgba(255,120,0,0.1);
+    0 0 30px rgba(255,140,0,0.35),
+    0 0 60px rgba(255,140,0,0.08);
 }
 
-/* NUMBER */
+/* NUMBERS */
 
 .number{
 
     font-family:'Orbitron',sans-serif;
 
-    font-size:2.8rem;
+    font-size:3rem;
 
     font-weight:900;
 
     color:white;
 
     text-shadow:
-    0 0 12px orange;
+    0 0 15px orange;
 }
 
 /* LABEL */
 
 .label{
 
-    margin-top:10px;
+    margin-top:12px;
+
+    font-size:1rem;
+
+    letter-spacing:3px;
+
+    color:#ffcc00;
+
+    text-transform:uppercase;
+}
+
+/* FULLSCREEN BUTTON */
+
+#fullscreen-btn{
+
+    position:fixed;
+
+    top:15px;
+    right:15px;
+
+    padding:16px 24px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff6600,
+    #ff0066);
+
+    color:white;
+
+    font-family:'Orbitron',sans-serif;
 
     font-size:0.95rem;
 
-    letter-spacing:2px;
-
-    color:#ffcc00;
-}
-
-/* COMEBACK */
-
-.comeback{
-
-    margin-top:35px;
-
-    text-align:center;
-
-    font-size:1.4rem;
-
     font-weight:700;
 
-    letter-spacing:2px;
+    cursor:pointer;
 
-    text-shadow:
-    0 0 10px orange,
-    0 0 25px red;
+    transition:0.3s;
+
+    box-shadow:
+    0 0 20px rgba(255,80,0,0.5);
+
+    z-index:999;
 }
 
-/* FLOATING PARTICLES */
+#fullscreen-btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(255,80,0,0.8),
+    0 0 60px rgba(255,0,100,0.2);
+}
+
+/* PARTICLES */
 
 .particle{
 
     position:fixed;
 
-    animation:float linear infinite;
+    z-index:-1;
 
     opacity:0.8;
 
-    z-index:-1;
+    animation:float linear infinite;
 }
 
 @keyframes float{
@@ -393,50 +513,7 @@ h2{
     }
 }
 
-/* FULLSCREEN BUTTON */
-
-#fullscreen-btn{
-
-    position:fixed;
-
-    top:20px;
-    right:20px;
-
-    padding:14px 22px;
-
-    border:none;
-
-    border-radius:16px;
-
-    background:
-    linear-gradient(135deg,#ff6600,#ff0066);
-
-    color:white;
-
-    font-family:'Orbitron',sans-serif;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    z-index:999;
-
-    transition:0.3s;
-
-    box-shadow:
-    0 0 20px rgba(255,80,0,0.5);
-}
-
-#fullscreen-btn:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 30px rgba(255,80,0,0.8),
-    0 0 60px rgba(255,0,100,0.2);
-}
-
-/* MOBILE RESPONSIVE */
+/* RESPONSIVE */
 
 @media(max-width:1100px){
 
@@ -444,12 +521,9 @@ h2{
 
         flex-direction:column;
 
-        text-align:center;
-
         padding:35px;
 
-        margin-top:40px;
-        margin-bottom:40px;
+        text-align:center;
     }
 
     .left,
@@ -460,24 +534,7 @@ h2{
 
     h1{
 
-        font-size:2.1rem;
-    }
-
-    h2{
-
-        font-size:1rem;
-    }
-
-    .motivation{
-
-        font-size:1rem;
-
-        line-height:1.9;
-    }
-
-    .number{
-
-        font-size:2.2rem;
+        font-size:2.3rem;
     }
 
     .profile{
@@ -486,18 +543,44 @@ h2{
         height:180px;
     }
 
+    .quote-line{
+
+        font-size:1.2rem;
+    }
+
+    .target-box{
+
+        font-size:1.2rem;
+    }
+
+    .quote-top,
+    .quote-bottom{
+
+        font-size:4rem;
+    }
+
     .countdown-container{
 
         grid-template-columns:
         repeat(2,1fr);
     }
+
+    .number{
+
+        font-size:2.2rem;
+    }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
     .countdown-container{
 
         grid-template-columns:1fr;
+    }
+
+    .motivation{
+
+        padding:35px 25px;
     }
 
     .container{
@@ -505,9 +588,9 @@ h2{
         padding:25px;
     }
 
-    .motivation{
+    h1{
 
-        padding:25px;
+        font-size:1.8rem;
     }
 }
 
@@ -517,21 +600,19 @@ h2{
 
 <body>
 
-<!-- FLOATING PARTICLES -->
+<!-- PARTICLES -->
 
-<div class="particle" style="left:5%; font-size:20px; animation-duration:7s;">✦</div>
+<div class="particle" style="left:8%; font-size:22px; animation-duration:7s;">✦</div>
 
-<div class="particle" style="left:20%; font-size:25px; animation-duration:9s;">⚡</div>
+<div class="particle" style="left:22%; font-size:18px; animation-duration:9s;">⚡</div>
 
-<div class="particle" style="left:40%; font-size:18px; animation-duration:6s;">✦</div>
+<div class="particle" style="left:48%; font-size:24px; animation-duration:11s;">✦</div>
 
-<div class="particle" style="left:60%; font-size:22px; animation-duration:10s;">🔥</div>
+<div class="particle" style="left:72%; font-size:20px; animation-duration:8s;">🔥</div>
 
-<div class="particle" style="left:80%; font-size:18px; animation-duration:8s;">⚡</div>
+<div class="particle" style="left:90%; font-size:18px; animation-duration:10s;">⚡</div>
 
-<div class="particle" style="left:92%; font-size:25px; animation-duration:11s;">✦</div>
-
-<!-- MAIN CONTAINER -->
+<!-- MAIN -->
 
 <div class="container">
 
@@ -558,24 +639,73 @@ h2{
 
         <div class="motivation">
 
-            IT'S NOT THE END...<br><br>
+            <div class="quote-top">❝</div>
 
-            THIS IS THE
-            <span class="highlight">
-            REBIRTH OF A WARRIOR.
-            </span><br><br>
+            <div class="quote-line">
 
-            REBUILDING WITH:<br><br>
+                DISCIPLINE TODAY,<br>
 
-            🔥 FULL DISCIPLINE<br>
-            🔥 FULL HARDWORK<br>
-            🔥 FULL FOCUS<br><br>
+                <span class="highlight">
+                SUCCESS
+                </span>
 
-            TARGET LOCKED:<br><br>
+                TOMORROW.
 
-            <span class="highlight">
-            IIT JEE 2027 🚀
-            </span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="quote-line">
+
+                ONE YEAR OF SACRIFICE,<br>
+
+                A LIFETIME OF
+
+                <span class="highlight">
+                FREEDOM.
+                </span>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="quote-line">
+
+                I DON'T NEED MOTIVATION,<br>
+
+                I NEED
+
+                <span class="highlight">
+                UNDER 500 RANK.
+                </span>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="quote-line">
+
+                EVERY DAY IS A STEP CLOSER<br>
+
+                TO
+
+                <span class="highlight">
+                MY DREAM.
+                </span>
+
+            </div>
+
+            <div class="target-box">
+
+                🎯 TARGET:
+
+                <span class="highlight">
+                UNDER 500 RANK 🚀
+                </span>
+
+            </div>
+
+            <div class="quote-bottom">❞</div>
 
         </div>
 
@@ -617,12 +747,6 @@ h2{
 
         </div>
 
-        <div class="comeback">
-
-            THE COMEBACK WILL BE LOUDER ⚡
-
-        </div>
-
     </div>
 
 </div>
@@ -647,14 +771,6 @@ function updateCountdown(){
     const now = new Date().getTime();
 
     const distance = targetDate - now;
-
-    if(distance < 0){
-
-        document.body.innerHTML =
-        "<h1 style='color:white;font-size:5rem;'>🔥 THE BATTLE HAS BEGUN 🔥</h1>";
-
-        return;
-    }
 
     const days =
     Math.floor(distance / (1000*60*60*24));
@@ -700,4 +816,3 @@ function toggleFullscreen(){
 </body>
 
 </html>
-```
